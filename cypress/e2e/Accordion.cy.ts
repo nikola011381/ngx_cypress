@@ -52,4 +52,17 @@ describe('First test Accordion', () => {
 
        })
 
+
+       it.only('Drugi deo ekrana', () => {
+   
+        cy.get('[class="accordion-container col-md-12 col-lg-6 col-xxxl-6"] ').last()
+        .contains('Product Details').click()
+        cy.get('[class="accordion-container col-md-12 col-lg-6 col-xxxl-6"] ').last()
+        .contains('A nebula is an interstellar cloud of dust').should('be.visible')
+        
+    })
+
+
+      
+
   })    
