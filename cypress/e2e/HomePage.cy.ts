@@ -1,5 +1,12 @@
  describe('First test', () => {
-  it('passes', () => {
+  beforeEach(() => {
     cy.visit('http://localhost:4200/')
+  
+
+   })
+
+  it('passes', () => {
+     cy.contains('Layout').should('be.visible')
+
    })
 })   
