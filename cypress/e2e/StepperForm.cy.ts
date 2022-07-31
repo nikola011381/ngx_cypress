@@ -1,3 +1,5 @@
+import { type } from "os"
+
 describe('Stepper Forma', () => {
 
   beforeEach(() => {
@@ -98,8 +100,53 @@ describe('Stepper Forma', () => {
          .find('button:contains("Try again") ').click()
          cy.get('[class="col-md-12 col-lg-6 col-xxxl-6"]')
          cy.get('input[placeholder="Enter your name"]').should('be.visible')
-
         })
 
+        it ('Second Step back', () => {
+          cy.get('[class="col-md-12 col-lg-6 col-xxxl-6"]')
+        .find('[placeholder="Enter your name"]').type("Back second step")
+        cy.get('[class="col-md-12 col-lg-6 col-xxxl-6"]')
+        .find('[type="submit"]').first().click()  
+          cy.get('[class="col-md-12 col-lg-6 col-xxxl-6"]')
+          cy.get('input[placeholder="Enter favorite movie"]').should('be.visible')
+          cy.get('[class="col-md-12 col-lg-6 col-xxxl-6"]')
+          .find('button:contains("prev") ').first().click()
+          cy.get('[class="col-md-12 col-lg-6 col-xxxl-6"]')
+          cy.get('input[placeholder="Enter your name"]').should('be.visible')
+          })
 
+          it('Third  Step back', () => {
+            cy.get('[class="col-md-12 col-lg-6 col-xxxl-6"]')
+            .find('[placeholder="Enter your name"]').type("sssssss")
+            cy.get('[class="col-md-12 col-lg-6 col-xxxl-6"]')
+            .find('[type="submit"]').first().click()
+            cy.get('[class="col-md-12 col-lg-6 col-xxxl-6"]')
+            .find('[placeholder="Enter favorite movie"]').type("sssssss")
+            cy.get('[class="col-md-12 col-lg-6 col-xxxl-6"]')
+            .find('[type="submit"]').first().click()
+              cy.get('[class="col-md-12 col-lg-6 col-xxxl-6"]')
+          .find('button:contains("prev") ').first().click()
+          cy.get('[class="col-md-12 col-lg-6 col-xxxl-6"]')
+          cy.get('input[placeholder="Enter favorite movie"]').should('be.visible')
+            })
+
+        it ('Third to First Step back', () => {
+          cy.get('[class="col-md-12 col-lg-6 col-xxxl-6"]')
+          .find('[placeholder="Enter your name"]').type("sssssss")
+          cy.get('[class="col-md-12 col-lg-6 col-xxxl-6"]')
+          .find('[type="submit"]').first().click()
+          cy.get('[class="col-md-12 col-lg-6 col-xxxl-6"]')
+          .find('[placeholder="Enter favorite movie"]').type("sssssss")
+          cy.get('[class="col-md-12 col-lg-6 col-xxxl-6"]')
+          .find('[type="submit"]').first().click()
+          cy.get('[class="col-md-12 col-lg-6 col-xxxl-6"]')
+          .find('button:contains("prev") ').first().click()
+          cy.get('[class="col-md-12 col-lg-6 col-xxxl-6"]')
+          cy.get('input[placeholder="Enter favorite movie"]').should('be.visible')
+          cy.get('[class="col-md-12 col-lg-6 col-xxxl-6"]')
+          .find('button:contains("prev") ').first().click()
+          cy.get('[class="col-md-12 col-lg-6 col-xxxl-6"]')
+          cy.get('input[placeholder="Enter your name"]').should('be.visible')
+        })
+  
   })   
