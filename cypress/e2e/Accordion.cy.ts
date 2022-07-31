@@ -60,7 +60,12 @@ describe('First test Accordion', () => {
         cy.get('[class="accordion-container col-md-12 col-lg-6 col-xxxl-6"] ').last()
         .contains('A nebula is an interstellar cloud of dust').should('be.visible')
         
-    })
+        cy.get('[class="accordion-container col-md-12 col-lg-6 col-xxxl-6"] ').last()
+        .contains('Reviews').click()
+        cy.get('[class="accordion-container col-md-12 col-lg-6 col-xxxl-6"] ').last()
+       
+
+     })
 
 
       
