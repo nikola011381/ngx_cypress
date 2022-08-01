@@ -49,7 +49,7 @@ describe('First test Accordion', () => {
         cy.contains('Product Details').click()
         cy.contains('A nebula is an interstellar cloud of dust').should('be.not.visible')
  
-
+ 
        })
 
 
