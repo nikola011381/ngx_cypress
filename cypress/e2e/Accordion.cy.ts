@@ -50,7 +50,7 @@ describe('First test Accordion', () => {
         cy.contains('A nebula is an interstellar cloud of dust').should('be.not.visible')
  
  
-       })
+       }) 
 
 
        it.only('Drugi deo ekrana', () => {
