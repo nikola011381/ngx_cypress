@@ -9,4 +9,4 @@
      cy.contains('Layout').should('be.visible')
 
    })
-})   
+})    
