@@ -7,7 +7,7 @@ describe('First test Stepper', () => {
       cy.get('.sidebar-toggle').click()
       cy.get('[type="submit"]').contains("next").click()
 
-     
+      
      cy.get('.horizontal > .step-content > h3.ng-star-inserted').should('have.text', 'Step content #2')
 
      cy.get('[type="submit"]').contains("next").click()
