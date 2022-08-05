@@ -6,7 +6,7 @@ describe('Stepper Forma 3', () => {
       cy.get('[class="menu-title"]').contains("Layout").click()
       cy.get('[class="menu-title"]').contains("Stepper").click() 
       cy.get('.sidebar-toggle').click()
-  
+   
      })
      it('Next back prvi test', () => {
         cy.get('[class="col-md-12 col-lg-6 col-xxxl-6"] [orientation="vertical"]')
