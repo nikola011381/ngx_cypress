@@ -1,5 +1,5 @@
 describe('Stepper Forma 3', () => {
-
+ 
     beforeEach(() => {
       cy.visit('http://localhost:4200/')
       cy.get('.sidebar-toggle').click()
